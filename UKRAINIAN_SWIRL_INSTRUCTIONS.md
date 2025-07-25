@@ -4,11 +4,11 @@
 ## Старт / Start
 
 ### Підготовка / Preparation 
-#### Встановлюємо пакет swirl(Installation swirl package)
+#### Встановлюємо пакет `swirl` (Installation `swirl` package)
 ```r
 install.packages("swirl") # тільки 1 раз, потім просто використовуємо 
 ```
-#### Активація swirl()
+#### Активація `swirl()`
 ```r
 library(swirl)
 ```
