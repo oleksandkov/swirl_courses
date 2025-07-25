@@ -17,8 +17,8 @@ activate()
 
 ### Крок 3 / Step 3
 ```r
-# Запусти цю функцію в R:
-activate()
+# Обери мову інтерфейсу:
+<img width="355" height="85" alt="image" src="https://github.com/user-attachments/assets/0b4b5a62-0f8f-4917-ab8e-f8a0c5247cee" />
 ```
 
 ### Варіант 2: Покроковий
