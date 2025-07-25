@@ -3,6 +3,12 @@
 
 ## Старт / Start
 
+### Підготовка / Preparation 
+## Встановлюємо пакет swirl / Installation swirl package
+```r
+install.packages("swirl")
+library(swirl)
+```
 ### Крок 1 / Step 1
 ```r
 # Запусти цей скрипт в R:
