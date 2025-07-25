@@ -1,14 +1,24 @@
 # Інструкції по використанню українських фраз у swirl
 # Instructions for using Ukrainian phrases in swirl
 
-## ШВИДКИЙ СТАРТ / QUICK START
+## Старт / Start
 
-### Варіант 1: Автоматичний (рекомендовано)
+### Крок 1 / Step 1
 ```r
 # Запусти цей скрипт в R:
-source("setup_ukrainian_swirl.R")
-# Потім запусти swirl:
-swirl()
+source("activate_ukrainian.R")
+```
+
+### Крок 2 / Step 2
+```r
+# Запусти цю функцію в R:
+activate()
+```
+
+### Крок 3 / Step 3
+```r
+# Запусти цю функцію в R:
+activate()
 ```
 
 ### Варіант 2: Покроковий
