@@ -35,7 +35,7 @@ Interface language?
 ```
 Обери 1 для того щоб видалити курс з наявних або 2 щоб продовжити налаштування
 
-### Крок 4 / Step 4
+### Крок 5 / Step 5
 
 #### Встановлення курсів (опціонально)
 ```r
@@ -46,7 +46,7 @@ Interface language?
 ```
 Обери 1 для того щоб встановити курс (детальніше далі), 2 для того щоб продовжити та 3 для того щоб встановити випадковий курс з наявних
 
-### Крок 4.1 / Step 4.1
+### Крок 5.1 / Step 5.1
 
 #### Встановлення курсів (опціонально)
 ```r
@@ -67,22 +67,40 @@ Interface language?
 Оберіть курс для встановлення за номером, 12 для ручного вводу, або 13 для рандомного курсу:
 ```
 Тут тобі видно всі курси що знаходяться в папці `swirl-courses/`
-### Варіант 2: Покроковий
+
+### Крок 6 / Step 6
+
+#### Вибір перекладу 
 ```r
-# 1. Завантаж swirl
-library(swirl)
+Яку версію перекладу бажаєте активувати?
+1) Тільки українські фрази (ukrainian_phrases_only)
+2) Повна українізація (ukrainian_full_translation)
+3) Залишити оригінал (без перекладу)
+```
+Обери версію для перекладу, натиснувши 1,2 або 3 (оригінальна версія `swirl()`)
 
-# 2. Завантаж українські фрази
-source("ukrainian_phrases.R")
+### Крок 7 / Step 7
 
-# 3. Активуй українські фрази
-activate_ukrainian_phrases()
-
-# 4. Запусти swirl
-swirl()
+#### Навчайся!!!
+```r
+swirl() # запусти це в консолі 
 ```
 
-## ДЕТАЛЬНИЙ ОПИС
+## Корисні поради та команди 
+
+### Команди 
+```r
+    activate_ukrainian_phrases_only()     # активувати тільки українські фрази
+    activate_ukrainian_full_translation() # активувати повну українізацію
+    deactivate_ukrainian_translation()    # повернути стандартний англійський swirl
+    check_ukrainian_status()              # перевірити статус перекладу
+    quick_activate()                      # швидка активація
+    quick_test()                          # швидкий тест фраз
+    activate_ukrainian(demo=TRUE)         # показати демо
+```
+### Поради 
+- Якщо активував переклад українських фраз, проте хочеш активувати повний переклад то слід спершу дективувати переклад `deactivate_ukrainian_translation()`, а вже потім активувати одну з функцій `activate_ukrainian_full_translation()` або `activate_ukrainian_phrases_only()`
+- `quick_activate()` ативує повний переклад українською 
 
 ### Що робить система?
 
@@ -106,34 +124,6 @@ swirl()
 - "Дай цьому ще один шанс."
 - "Ще один раз. Ти можеш це зробити!"
 
-## КОРИСНІ КОМАНДИ
-
-### Тестування фраз (без запуску swirl):
-```r
-source("ukrainian_phrases.R")
-test_ukrainian_phrases()
-```
-
-### Активація українських фраз:
-```r
-library(swirl)
-source("ukrainian_phrases.R")
-activate_ukrainian_phrases()
-```
-
-### Деактивація (повернення до англійських):
-```r
-deactivate_ukrainian_phrases()
-```
-
-### Перевірка чи активні українські фрази:
-```r
-# Запусти swirl і подивися на повідомлення
-# або протестуй функції напряму:
-praise_ua()  # має показати українську фразу
-tryAgain_ua()  # має показати українську фразу
-```
-
 ## ТЕХНІЧНІ ДЕТАЛІ
 
 ### Як це працює?
@@ -156,27 +146,28 @@ tryAgain_ua()  # має показати українську фразу
 ### Помилка "swirl не завантажений":
 ```r
 library(swirl)
-source("ukrainian_phrases.R")
-activate_ukrainian_phrases()
+source("activate_ukrainian.R")
+quick_activate()
 ```
 
 ### Фрази не змінилися:
 ```r
 # Перевір чи активовано:
-activate_ukrainian_phrases()
+activate_ukrainian_phrases_only() або activate_ukrainian_full_translation()
 # Або перезапусти R і спробуй знову
 ```
 
 ### Повернення до англійських фраз:
 ```r
-deactivate_ukrainian_phrases()
+deactivate_ukrainian_translation()
 # або просто перезапусти R
 ```
 
 ## ФАЙЛИ СИСТЕМИ
 
 - `ukrainian_phrases.R` - основні функції та фрази
-- `setup_ukrainian_swirl.R` - скрипт автоматичного налаштування  
+- `full_ukrainian_swirl.R` - переклад інтерфейсу swirl
+- `activate_ukainian.R` - скрипт налаштування  
 - `UKRAINIAN_SWIRL_INSTRUCTIONS.md` - цей файл інструкцій
 
 ## РОЗШИРЕННЯ СИСТЕМИ
